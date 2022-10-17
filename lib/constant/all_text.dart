@@ -27,4 +27,5 @@ class AllText {
   static String alreadyaccountdialouge = 'Already have an account?';
   static String iacceptthe = "I accept the";
   static String terms = "Terms & Conditions";
+  static String termsandcondition = 'Terms & Conditions';
 }

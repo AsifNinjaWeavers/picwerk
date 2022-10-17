@@ -3,5 +3,5 @@
 import 'package:flutter/material.dart';
 
 class AllColor {
-  static Color SigninColor = Color(0xff125222d);
+  static Color backgroundcolor = const Color(0xff125222d);
 }
