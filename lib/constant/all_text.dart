@@ -3,6 +3,7 @@
 class AllText {
   static String signin = "Sign in";
   static String signup = "Sign Up";
+  static String signout = "Sign Out";
   static String password = 'password';
   static String Password = "Password";
   static String createtyouraccountdialouge = "Create your account to sign in";
@@ -28,4 +29,19 @@ class AllText {
   static String iacceptthe = "I accept the";
   static String terms = "Terms & Conditions";
   static String termsandcondition = 'Terms & Conditions';
+  static String navbaritemhome = "Home";
+  static String navbaritemmywork = "My Work";
+  static String navbaritemchat = "Chat";
+  static String navbaritemprofile = "Profile";
+  static String client = 'Client';
+  static String messages = 'Messages';
+  static String pastjobs = "Past Jobs";
+  static String updateprofile = "Past Jobs";
+  static String changepassword = "Change Pssword";
+  static String reviews = "Reviews";
+  static String payment = "Payment";
+  static String faqs = "FAQs";
+  static String contactus = "Contact Us";
+  static String deleteaccount = "Delete Account";
+  static String privacypolicy = "Privacy Policy";
 }

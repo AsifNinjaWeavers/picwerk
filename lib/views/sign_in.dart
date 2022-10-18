@@ -97,19 +97,20 @@ class _SignInState extends State<SignIn> {
                   const SizedBox(
                     height: 3,
                   ),
-                  TextButtonWidget(
-                    onpreesed: () async {
-                      AuthController.email.clear();
-                      AuthController.password.clear();
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => ForgetPssword()));
-                    },
-                    text:
-                        "${AllText.forgot} ${AllText.password}${AllText.questionmark}",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2!
-                        .copyWith(color: const Color(0xff949398), fontSize: 12),
+                  Container(
+                    alignment: Alignment.topRight,
+                    child: TextButtonWidget(
+                      onpreesed: () async {
+                        AuthController.email.clear();
+                        AuthController.password.clear();
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ForgetPssword()));
+                      },
+                      text:
+                          "${AllText.forgot} ${AllText.password}${AllText.questionmark}",
+                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                          color: const Color(0xff949398), fontSize: 12),
+                    ),
                   ),
                   Elevetd_Button_Widget(
                     onpreesed: () async {
@@ -119,7 +120,7 @@ class _SignInState extends State<SignIn> {
                               formkey.currentState!.validate().toString());
                     },
                     widget: _isLoading == true
-                        ? Center(
+                        ? const Center(
                             child:
                                 CircularProgressIndicator(color: Colors.white),
                           )
@@ -180,7 +181,7 @@ class _SignInState extends State<SignIn> {
         AuthController.email.clear();
         AuthController.password.clear();
         Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: ((context) => const Home())),
+            MaterialPageRoute(builder: ((context) => Home())),
             (route) => false);
       }),
     );

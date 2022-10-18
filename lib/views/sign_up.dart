@@ -131,7 +131,6 @@ class _SignUpState extends State<SignUp> {
                     children: [
                       Customcheckbox(
                         accept: (val) {
-                          debugPrint(val.toString());
                           accept = val;
                         },
                       ),
@@ -235,7 +234,7 @@ class _SignUpState extends State<SignUp> {
       AuthController.lastname.clear();
       AuthController.confirmpassword.clear();
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: ((context) => const Home())),
+          MaterialPageRoute(builder: ((context) =>  Home())),
           (route) => false);
     }));
   }

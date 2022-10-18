@@ -13,14 +13,13 @@ class TextButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.bottomRight,
-      child: TextButton(
-          onPressed: () => onpreesed(),
-          child: Text(
-            text,
-            style: style,
-          )),
-    );
+    return
+        // alignment: Alignment.bottomRight,
+        TextButton(
+            onPressed: () => onpreesed(),
+            child: Text(
+              text,
+              style: style,
+            ));
   }
 }
