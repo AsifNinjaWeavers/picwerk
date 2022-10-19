@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(55), child: _appbar[index]),
+          preferredSize: const Size.fromHeight(60), child: _appbar[index]),
       backgroundColor: AllColor.backgroundcolor,
       body: _pages[index],
       bottomNavigationBar: BottomNavigationBarHome(

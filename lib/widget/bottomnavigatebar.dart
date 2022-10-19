@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../constant/all_text.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
-   BottomNavigationBarHome({
+  BottomNavigationBarHome({
     required this.index,
     Key? key,
   }) : super(key: key);
@@ -25,6 +25,14 @@ class _BottomNavigationBarHomeState extends State<BottomNavigationBarHome> {
           topLeft: Radius.circular(30),
         ),
         child: BottomNavigationBar(
+          selectedLabelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(
+                fontSize: 10,
+                color: const Color(0xff1c5abff),
+              ),
+          unselectedLabelStyle: Theme.of(context)
+              .textTheme
+              .bodyText1!
+              .copyWith(fontSize: 10, color: Color(0xff159575D)),
           currentIndex: selectindex,
           onTap: (value) {
             setState(() {

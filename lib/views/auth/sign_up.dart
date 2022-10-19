@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:picwerk/constant/image.dart';
 import 'package:picwerk/controller/authcontroller.dart';
 import 'package:picwerk/utility/colors.dart';
+import 'package:picwerk/views/auth/sign_in.dart';
 import 'package:picwerk/views/home.dart';
-import 'package:picwerk/views/sign_in.dart';
 import 'package:picwerk/views/terms_and_condition.dart';
 
-import '../constant/all_text.dart';
-import '../widget/elevetd_button_widget.dart';
-import '../widget/custom_checkbox.dart';
-import '../widget/input_formfield.dart';
-import '../widget/text_button.dart';
-
+import '../../constant/all_text.dart';
+import '../../widget/custom_checkbox.dart';
+import '../../widget/elevetd_button_widget.dart';
+import '../../widget/input_formfield.dart';
+import '../../widget/text_button.dart';
 class SignUp extends StatefulWidget {
   SignUp({super.key});
 
@@ -83,6 +82,8 @@ class _SignUpState extends State<SignUp> {
                     height: 42,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.name,
+                    labeltext: null,
                     normalfield: true,
                     controller: AuthController.firstname,
                     hinttext: '${AllText.first} ${AllText.name}',
@@ -92,6 +93,8 @@ class _SignUpState extends State<SignUp> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.name,
+                    labeltext: null,
                     normalfield: true,
                     controller: AuthController.lastname,
                     hinttext: '${AllText.last} ${AllText.name}',
@@ -101,6 +104,8 @@ class _SignUpState extends State<SignUp> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.emailAddress,
+                    labeltext: null,
                     validator: AuthController.validateEmail,
                     normalfield: true,
                     controller: AuthController.email,
@@ -110,6 +115,8 @@ class _SignUpState extends State<SignUp> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.visiblePassword,
+                    labeltext: null,
                     validator: AuthController.validatePass,
                     normalfield: false,
                     controller: AuthController.password,
@@ -119,6 +126,8 @@ class _SignUpState extends State<SignUp> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.visiblePassword,
+                    labeltext: null,
                     validator: AuthController.validatePass,
                     normalfield: false,
                     controller: AuthController.confirmpassword,
@@ -155,7 +164,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ],
                   ),
-                  Elevetd_Button_Widget(
+                  ElevetdButtonWidgetCustom(
                     onpreesed: () async {
                       const snackBar = SnackBar(
                         content: Text('Accept trems'),
@@ -165,8 +174,7 @@ class _SignUpState extends State<SignUp> {
                               ? fn()
                               : ScaffoldMessenger.of(context)
                                   .showSnackBar(snackBar)
-                          : debugPrint(
-                              formkey.currentState!.validate().toString());
+                          : null;
                     },
                     widget: _isLoading == true
                         ? const Center(
@@ -234,8 +242,7 @@ class _SignUpState extends State<SignUp> {
       AuthController.lastname.clear();
       AuthController.confirmpassword.clear();
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: ((context) =>  Home())),
-          (route) => false);
+          MaterialPageRoute(builder: ((context) => Home())), (route) => false);
     }));
   }
 }

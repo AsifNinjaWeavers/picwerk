@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:picwerk/constant/all_text.dart';
 import 'package:picwerk/constant/image.dart';
 import 'package:picwerk/controller/authcontroller.dart';
-import 'package:picwerk/views/reset_password.dart';
+import 'package:picwerk/views/auth/reset_password.dart';
 import 'package:picwerk/widget/elevetd_button_widget.dart';
 import 'package:picwerk/widget/text_button.dart';
-import '../widget/input_formfield.dart';
-import '../utility/colors.dart';
+
+import '../../utility/colors.dart';
+import '../../widget/input_formfield.dart';
+
 
 class ForgetPssword extends StatefulWidget {
   ForgetPssword({super.key});
@@ -88,7 +90,9 @@ class _ForgetPsswordState extends State<ForgetPssword> {
                     height: 60,
                   ),
                   TextInputField(
-                    validator: AuthController.validatePass,
+                    keyboardtype: TextInputType.emailAddress,
+                    labeltext: null,
+                    validator: AuthController.validateEmail,
                     normalfield: true,
                     controller: AuthController.email,
                     hinttext: '${AllText.email} ${AllText.address}',
@@ -96,7 +100,7 @@ class _ForgetPsswordState extends State<ForgetPssword> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Elevetd_Button_Widget(
+                  ElevetdButtonWidgetCustom(
                     widget: _isLoading == true
                         ? const Center(
                             child: CircularProgressIndicator(

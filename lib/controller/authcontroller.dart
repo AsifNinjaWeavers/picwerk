@@ -25,7 +25,6 @@ class AuthController {
   }
 
   static String? validatePass(value) {
-    debugPrint(value);
     if (value.length == 0) {
       return "Required";
     } else if (value.length < 8) {

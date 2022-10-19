@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:picwerk/constant/all_text.dart';
-import 'package:picwerk/views/sign_in.dart';
+import 'package:picwerk/views/allpages/profile/contact_us.dart';
+import 'package:picwerk/views/allpages/profile/update_profile.dart';
 import 'package:picwerk/widget/elevetd_button_widget.dart';
-
 import '../../constant/image.dart';
 import '../../widget/listtile.dart';
-import '../../widget/text_button.dart';
+import '../auth/sign_in.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -14,7 +13,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 30, right: 30, top: 5),
+      padding: EdgeInsets.only(left: 30, right: 25, top: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,50 +37,134 @@ class Profile extends StatelessWidget {
                   Theme.of(context).textTheme.subtitle2!.copyWith(fontSize: 14),
             ),
           ),
-          SizedBox(
-            height: 5,
+          const SizedBox(
+            height: 10,
           ),
-          Divider(
+          const Divider(
             height: 5,
             thickness: 1,
             color: Color(0xff159575D),
           ),
+          const SizedBox(
+            height: 18,
+          ),
           CustomListTile(
+            ontap: () {},
             text: AllText.pastjobs,
-          ),
-          CustomListTile(
-            text: AllText.updateprofile,
-          ),
-          CustomListTile(
-            text: AllText.changepassword,
-          ),
-          CustomListTile(
-            text: AllText.reviews,
-          ),
-          CustomListTile(
-            text: AllText.payment,
-          ),
-          CustomListTile(
-            text: AllText.faqs,
-          ),
-          CustomListTile(
-            text: AllText.termsandcondition,
-          ),
-          CustomListTile(
-            text: AllText.privacypolicy,
-          ),
-          CustomListTile(
-            text: AllText.contactus,
-          ),
-          TextButtonWidget(
-            onpreesed: () {},
             style: Theme.of(context)
                 .textTheme
-                .subtitle2!
-                .copyWith(fontSize: 16, color: Color(0xff1594C76)),
-            text: AllText.deleteaccount,
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
           ),
-          Elevetd_Button_Widget(
+          const SizedBox(
+            height: 18,
+          ),
+          CustomListTile(
+            ontap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => UpdateProfile()));
+            },
+            text: AllText.updateprofile,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.changepassword,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.reviews,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.payment,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.faqs,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.termsandcondition,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.privacypolicy,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          CustomListTile(
+            ontap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => ContactUs()));
+            },
+            text: AllText.contactus,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Theme.of(context).primaryColor),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          CustomListTile(
+            ontap: () {},
+            text: AllText.deleteaccount,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontSize: 16, color: Color(0xff1594C76)),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevetdButtonWidgetCustom(
               widget: Text(AllText.signout),
               onpreesed: () {
                 Navigator.of(context).pushAndRemoveUntil(

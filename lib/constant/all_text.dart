@@ -36,7 +36,7 @@ class AllText {
   static String client = 'Client';
   static String messages = 'Messages';
   static String pastjobs = "Past Jobs";
-  static String updateprofile = "Past Jobs";
+  static String updateprofile = "Update Profile";
   static String changepassword = "Change Pssword";
   static String reviews = "Reviews";
   static String payment = "Payment";
@@ -44,4 +44,13 @@ class AllText {
   static String contactus = "Contact Us";
   static String deleteaccount = "Delete Account";
   static String privacypolicy = "Privacy Policy";
+  static String hi = "Hi,";
+  static String updatedprofile = "Updated Profile";
+  static String fullname = 'Full Name';
+  static String phone = 'Phone';
+  static String contactusdialouge =
+      'If you have any querries feel free to contact with us!:';
+  static String subject = "Subject";
+  static String message = "Write your message here...";
+  static String sendmessage = "Send Message";
 }

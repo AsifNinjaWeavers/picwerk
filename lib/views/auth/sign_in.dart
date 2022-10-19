@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:picwerk/views/sign_up.dart';
+import 'package:picwerk/constant/image.dart';
+import 'package:picwerk/views/auth/forgot_password.dart';
+import 'package:picwerk/views/auth/sign_up.dart';
+import 'package:picwerk/views/home.dart';
 import 'package:picwerk/widget/elevetd_button_widget.dart';
 import 'package:picwerk/widget/input_formfield.dart';
 import 'package:picwerk/utility/colors.dart';
-import 'package:picwerk/views/forgot_password.dart';
 import 'package:picwerk/widget/text_button.dart';
+import '../../constant/all_text.dart';
+import '../../controller/authcontroller.dart';
 
-import '../constant/all_text.dart';
-import '../constant/image.dart';
-import '../controller/authcontroller.dart';
-import 'home.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -80,6 +80,8 @@ class _SignInState extends State<SignIn> {
                     height: 42,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.emailAddress,
+                    labeltext: null,
                     validator: AuthController.validateEmail,
                     normalfield: true,
                     controller: AuthController.email,
@@ -89,6 +91,8 @@ class _SignInState extends State<SignIn> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.visiblePassword,
+                    labeltext: null,
                     validator: AuthController.validatePass,
                     normalfield: false,
                     controller: AuthController.password,
@@ -112,12 +116,9 @@ class _SignInState extends State<SignIn> {
                           color: const Color(0xff949398), fontSize: 12),
                     ),
                   ),
-                  Elevetd_Button_Widget(
+                  ElevetdButtonWidgetCustom(
                     onpreesed: () async {
-                      formkey.currentState!.validate()
-                          ? fn()
-                          : debugPrint(
-                              formkey.currentState!.validate().toString());
+                      formkey.currentState!.validate() ? fn() : null;
                     },
                     widget: _isLoading == true
                         ? const Center(

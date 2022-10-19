@@ -3,12 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:picwerk/constant/image.dart';
 import 'package:picwerk/utility/colors.dart';
-import 'package:picwerk/views/sign_in.dart';
-
-import '../constant/all_text.dart';
-import '../controller/authcontroller.dart';
-import '../widget/elevetd_button_widget.dart';
-import '../widget/input_formfield.dart';
+import 'package:picwerk/views/auth/sign_in.dart';
+import '../../constant/all_text.dart';
+import '../../controller/authcontroller.dart';
+import '../../widget/elevetd_button_widget.dart';
+import '../../widget/input_formfield.dart';
 
 class ResetPassword extends StatefulWidget {
   ResetPassword({super.key});
@@ -97,6 +96,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                     height: 42,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.visiblePassword,
+                    labeltext: null,
                     validator: AuthController.validatePass,
                     normalfield: false,
                     controller: AuthController.password,
@@ -106,6 +107,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                     height: 15,
                   ),
                   TextInputField(
+                    keyboardtype: TextInputType.visiblePassword,
+                    labeltext: null,
                     validator: AuthController.validatePass,
                     normalfield: false,
                     controller: AuthController.confirmpassword,
@@ -114,7 +117,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   const SizedBox(
                     height: 25,
                   ),
-                  Elevetd_Button_Widget(
+                  ElevetdButtonWidgetCustom(
                     widget: _isLoading == true
                         ? const Center(
                             child:

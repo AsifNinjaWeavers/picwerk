@@ -13,6 +13,7 @@ class MyWorkAppBar extends StatelessWidget {
               .textTheme
               .subtitle1!
               .copyWith(fontSize: 30, color: Color(0xff1FFFFFF))),
+              
       titleSpacing: 30,
       elevation: 0,
       automaticallyImplyLeading: false,
