@@ -5,7 +5,6 @@ class CustomTheme {
   ThemeData get themedata => ThemeData(
         // primaryTextTheme: GoogleFonts.lato(),
         //w500 for medium
-
         textTheme: TextTheme(
           subtitle1: GoogleFonts.inter(
             color: const Color(0xffC5ABFF),
@@ -21,6 +20,9 @@ class CustomTheme {
           //w400 for regular
           bodyText2: GoogleFonts.inter(
               color: const Color(0xff858487), fontWeight: FontWeight.w400),
+          //w700 for bold    
+          headline1: GoogleFonts.inter(
+              color: const Color(0xff25222D), fontWeight: FontWeight.w700,fontSize: 12),    
           button: GoogleFonts.inter(
             color: const Color(0xffFFFFFF),
             fontWeight: FontWeight.w700,

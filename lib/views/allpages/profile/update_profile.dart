@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:picwerk/constant/all_text.dart';
+import 'package:picwerk/controller/pic_image_Controller.dart';
 import 'package:picwerk/controller/update_profile_controller.dart';
 import 'package:picwerk/widget/input_formfield.dart';
 
@@ -50,7 +50,38 @@ class UpdateProfile extends StatelessWidget {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Color(0xff19A8ABF)),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showMaterialModalBottomSheet(
+  context: context,
+  builder: (context) => Container(height: 80,
+  child: Center(child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+    
+                    Container(
+                  height: 37,
+                  width: 37,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xff19A8ABF)),
+                  child: IconButton(
+      onPressed: ()async=>PicImageController.getFromCamera(),
+      icon:const Icon(Icons.photo_camera,
+                      color: Colors.black,
+                      size: 17,))),
+                      Container(
+                  height: 37,
+                  width: 37,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xff19A8ABF)),
+                  child: IconButton(
+      onPressed: ()async=>PicImageController.getFromGallery(),
+      icon:const Icon(Icons.browse_gallery_sharp,
+                      color: Colors.black,
+                      size: 17,))),
+  ],)),
+  ),
+);
+                    },
                     icon: const Icon(
                       Icons.photo_camera,
                       color: Colors.white,

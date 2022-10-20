@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:picwerk/constant/all_text.dart';
+
 import 'package:picwerk/views/allappbar/chat_appbar.dart';
 import 'package:picwerk/views/allappbar/home_appbar.dart';
 import 'package:picwerk/views/allappbar/mywork_appbar.dart';
 import 'package:picwerk/views/allappbar/profile_appbar.dart';
 import 'package:picwerk/widget/bottomnavigatebar.dart';
-import 'package:picwerk/widget/switch.dart';
-
 import '../utility/colors.dart';
 import 'allpages/chat_page.dart';
 import 'allpages/home_page.dart';
@@ -36,6 +34,7 @@ class _HomeState extends State<Home> {
           preferredSize: const Size.fromHeight(60), child: _appbar[index]),
       backgroundColor: AllColor.backgroundcolor,
       body: _pages[index],
+     
       bottomNavigationBar: BottomNavigationBarHome(
         index: (val) {
           setState(() {

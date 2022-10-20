@@ -23,15 +23,6 @@ class ElevetdButtonWidgetCustom extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0)),
             backgroundColor: color),
-        // style: ButtonStyle(
-        //   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        //     RoundedRectangleBorder(
-        //       borderRadius: BorderRadius.circular(25.0),
-        //     ),
-        //   ),
-        //   backgroundColor:
-        //       const MaterialStatePropertyAll<Color>(color),
-        // ),
         child: widget,
       ),
     );

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:picwerk/constant/all_text.dart';
 
 import '../../utility/colors.dart';
+import '../allpages/notification.dart';
 
 class ProfileAppBar extends StatelessWidget {
   const ProfileAppBar({super.key});
@@ -53,7 +54,7 @@ class ProfileAppBar extends StatelessWidget {
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () =>Navigator.of(context).push(MaterialPageRoute(builder:(context) => Notifications()),),
                 icon: const Icon(
                   Icons.notifications_none,
                   color: Colors.white,

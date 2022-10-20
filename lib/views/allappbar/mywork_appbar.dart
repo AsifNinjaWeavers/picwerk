@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utility/colors.dart';
+import '../allpages/notification.dart';
 
 class MyWorkAppBar extends StatelessWidget {
   const MyWorkAppBar({super.key});
@@ -28,7 +29,7 @@ class MyWorkAppBar extends StatelessWidget {
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () =>Navigator.of(context).push(MaterialPageRoute(builder:(context) => Notifications(),),),
                 icon: const Icon(
                   Icons.notifications_none,
                   color: Colors.white,

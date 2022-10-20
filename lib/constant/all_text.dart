@@ -53,4 +53,9 @@ class AllText {
   static String subject = "Subject";
   static String message = "Write your message here...";
   static String sendmessage = "Send Message";
+  static String createjobpost = "Create a Job post";
+  static String deleteaccountdialouge="Are you sure you want to delete your account?";
+  static String cancel="Cancel";
+  static String delete="Delete";
+  static String notication="Notifications";
 }

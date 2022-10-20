@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:picwerk/views/allpages/notification.dart';
 import '../../constant/all_text.dart';
 import '../../utility/colors.dart';
 
@@ -49,7 +50,7 @@ class ChatAppBar extends StatelessWidget {
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () =>Navigator.of(context).push(MaterialPageRoute(builder:(context) => Notifications()),),
                 icon: const Icon(
                   Icons.notifications_none,
                   color: Colors.white,

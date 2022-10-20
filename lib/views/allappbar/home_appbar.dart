@@ -5,8 +5,10 @@ import 'package:flutter/src/widgets/framework.dart';
 import '../../constant/all_text.dart';
 import '../../utility/colors.dart';
 import '../../widget/switch.dart';
+import '../allpages/notification.dart';
 
 class HomePageBar extends StatelessWidget {
+ 
   const HomePageBar({super.key});
 
   @override
@@ -41,7 +43,7 @@ class HomePageBar extends StatelessWidget {
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(context) => Notifications()),),
                 icon: const Icon(
                   Icons.notifications_none,
                   color: Colors.white,
